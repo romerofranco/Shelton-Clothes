@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ================================
+   SHELTON CLOTHES - DESIGN SYSTEM
+   ================================ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Colores principales */
+  --color-shelton-black:     #0A0A0A;
+  --color-shelton-black-soft:#141414;
+  --color-shelton-gray:      #2A2A2A;
+  --color-shelton-gray-mid:  #555555;
+  --color-shelton-gray-light:#8A8A8A;
+  --color-shelton-white:     #F0EFEB;
+  --color-shelton-gold:      #F5A623;
+
+  /* Tipografías */
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-body:    'Barlow', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Variables CSS globales */
+:root {
+  --background: #0A0A0A;
+  --foreground: #F0EFEB;
 }
 
+/* Base */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
