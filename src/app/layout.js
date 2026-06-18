@@ -1,6 +1,7 @@
 import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 // Tipografía para el cuerpo del texto
 const barlow = Barlow({
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
       <body className="bg-[#0A0A0A] text-[#F0EFEB] min-h-screen">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
