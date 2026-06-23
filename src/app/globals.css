@@ -1,31 +1,27 @@
 @import "tailwindcss";
 
 /* ================================
-   SHELTON CLOTHES - DESIGN SYSTEM
+   SHELTON CLOTHES - VERSIÓN CLARA
    ================================ */
 
 @theme inline {
-  /* Colores principales */
-  --color-shelton-black:     #0A0A0A;
-  --color-shelton-black-soft:#141414;
-  --color-shelton-gray:      #2A2A2A;
-  --color-shelton-gray-mid:  #555555;
-  --color-shelton-gray-light:#8A8A8A;
-  --color-shelton-white:     #F0EFEB;
+  --color-shelton-black:     #111111;
+  --color-shelton-black-soft:#1A1A1A;
+  --color-shelton-gray:      #E5E3DC;
+  --color-shelton-gray-mid:  #999999;
+  --color-shelton-gray-light:#777777;
+  --color-shelton-white:     #FAFAF8;
   --color-shelton-gold:      #F5A623;
 
-  /* Tipografías */
   --font-display: 'Barlow Condensed', sans-serif;
   --font-body:    'Barlow', sans-serif;
 }
 
-/* Variables CSS globales */
 :root {
-  --background: #0A0A0A;
-  --foreground: #F0EFEB;
+  --background: #FAFAF8;
+  --foreground: #111111;
 }
 
-/* Base */
 body {
   background: var(--background);
   color: var(--foreground);

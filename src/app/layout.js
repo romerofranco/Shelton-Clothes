@@ -2,6 +2,7 @@ import { Barlow, Barlow_Condensed } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import { CartProvider } from "@/context/CartContext";
 
 // Tipografía para el cuerpo del texto
 const barlow = Barlow({
@@ -30,10 +31,12 @@ export default function RootLayout({ children }) {
       lang="es"
       className={`${barlow.variable} ${barlowCondensed.variable}`}
     >
-      <body className="bg-[#0A0A0A] text-[#F0EFEB] min-h-screen">
-        <Navbar />
-        {children}
-        <Footer />
+      <body className="bg-[#FAFAF8] text-[#111111] min-h-screen flex flex-col">
+        <CartProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
