@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
 
 export default function ProductCard({ product }) {
@@ -20,7 +21,7 @@ export default function ProductCard({ product }) {
   }
 
   return (
-    <div className="bg-white cursor-pointer group">
+    <Link href={`/productos/${product.id}`} className="bg-white cursor-pointer group block">
 
       {/* IMAGEN */}
       <div className="w-full aspect-[3/4] bg-[#F0EEE8] flex items-center justify-center relative overflow-hidden">
@@ -41,7 +42,7 @@ export default function ProductCard({ product }) {
           </span>
         )}
 
-        {/* Botón agregar al carrito - aparece al hacer hover */}
+        {/* Botón agregar al carrito */}
         <button
           onClick={handleAddToCart}
           style={{ fontFamily: 'var(--font-display)' }}
@@ -75,6 +76,6 @@ export default function ProductCard({ product }) {
         </div>
       </div>
 
-    </div>
+    </Link>
   );
 }
